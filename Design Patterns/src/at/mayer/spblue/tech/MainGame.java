@@ -19,7 +19,6 @@ public class MainGame extends BasicGame {
     public void update(GameContainer gc, int i) throws SlickException {
 
     }
-
     @Override
     public void render(GameContainer gc, Graphics graphics) throws SlickException {
 
