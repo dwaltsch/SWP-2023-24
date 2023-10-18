@@ -3,27 +3,29 @@ package at.mayer.spblue.tech;
 import org.newdawn.slick.*;
 import org.newdawn.slick.tests.AnimationTest;
 
+import java.util.List;
+
 public class MainGame extends BasicGame {
-    private CircleActor cal,cal2;
+    private List<CircleActor> circles;
+    private RectangleActor rec;
     public MainGame(String title) {
         super(title);
     }
 
     @Override
     public void render(GameContainer gc, Graphics graphics) throws SlickException {
-        this.cal.render(graphics);
-        this.cal2.render(graphics);
+
+        this.rec.render(graphics);
     }
     @Override
     public void init(GameContainer gc) throws SlickException {
-        this.cal = new CircleActor(100,100);
-        this.cal2 = new CircleActor(100,100);
+        this.rec = new RectangleActor(50,50);
     }
 
     @Override
     public void update(GameContainer gc, int delta) throws SlickException {
-        this.cal.update(gc,delta);
-        this.cal2.update(gc,delta);
+
+        this.rec.update(gc,delta);
     }
 
     public static void main(String[] argv) {
