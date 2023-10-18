@@ -1,7 +1,6 @@
 package at.mayer.spblue.tech;
 
 import org.newdawn.slick.*;
-import org.newdawn.slick.tests.AnimationTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +22,10 @@ public class MainGame extends BasicGame {
     @Override
     public void init(GameContainer gc) throws SlickException {
         this.actors = new ArrayList<>();
-        this.actors.add(new CircleActor(75,75));
-        this.actors.add(new CircleActor(100,100));
+        MoveRight mr1 = new MoveRight(10,10,0.4f);
+        MoveRight mr2 = new MoveRight(10,10,0.5f);
+        this.actors.add(new CircleActor(mr1));
+        this.actors.add(new CircleActor(mr2));
         this.actors.add(new RectangleActor(50,50));
     }
 
