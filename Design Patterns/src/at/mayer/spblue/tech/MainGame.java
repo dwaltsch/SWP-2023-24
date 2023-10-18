@@ -7,33 +7,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainGame extends BasicGame {
-    private List<CircleActor> circles;
-    private RectangleActor rec;
+
+    private List<Actor> actors;
+
     public MainGame(String title) {
         super(title);
     }
 
     @Override
     public void render(GameContainer gc, Graphics graphics) throws SlickException {
-        for (CircleActor ca: this.circles) {
-            ca.render(graphics);
+        for (Actor act: this.actors) {
+            act.render(graphics);
         }
-        this.rec.render(graphics);
     }
     @Override
     public void init(GameContainer gc) throws SlickException {
-        this.circles = new ArrayList<>();
-        this.circles.add(new CircleActor(75,75));
-        this.circles.add(new CircleActor(100,100));
-        this.rec = new RectangleActor(50,50);
+        this.actors = new ArrayList<>();
+        this.actors.add(new CircleActor(75,75));
+        this.actors.add(new CircleActor(100,100));
+        this.actors.add(new RectangleActor(50,50));
     }
 
     @Override
     public void update(GameContainer gc, int delta) throws SlickException {
-        for (CircleActor ca: this.circles) {
-            ca.update(gc,delta);
+        for (Actor act: this.actors) {
+            act.update(gc,delta);
         }
-        this.rec.update(gc,delta);
     }
 
     public static void main(String[] argv) {

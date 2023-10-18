@@ -3,7 +3,7 @@ package at.mayer.spblue.tech;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
-public class RectangleActor {
+public class RectangleActor implements Actor{
     private double x,y;
 
     public RectangleActor(double x, double y) {

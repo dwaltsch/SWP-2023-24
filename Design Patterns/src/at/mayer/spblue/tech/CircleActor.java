@@ -3,7 +3,7 @@ package at.mayer.spblue.tech;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
-public class CircleActor {
+public class CircleActor implements Actor{
     private double x,y;
 
     public CircleActor(double x, double y) {
