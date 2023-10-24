@@ -1,4 +1,4 @@
-package at.mayer.spblue.tech;
+package at.mayer.spblue.tech.actors;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;

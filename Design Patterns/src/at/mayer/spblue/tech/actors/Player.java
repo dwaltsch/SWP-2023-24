@@ -1,16 +1,24 @@
-package at.mayer.spblue.tech;
+package at.mayer.spblue.tech.actors;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 
-public class Player implements Actor{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Player implements Actor {
     private float x,y,speed;
+    private List<Observer> observers;
 
     public Player() {
+        this.observers = new ArrayList<>();
         this.x = 300;
         this.y = 300;
         this.speed = 1f;
+    }
+    public void addObserver(Observer lcircle){
+        this.observers.add(lcircle);
     }
     public void move(GameContainer gc,int delta){
         if(gc.getInput().isKeyDown(Input.KEY_LEFT)){
@@ -19,6 +27,11 @@ public class Player implements Actor{
         }
         if(gc.getInput().isKeyDown(Input.KEY_RIGHT)){
             this.x += delta * speed;
+        }
+        if(this.x > 700){
+            for(Observer circ: observers){
+                circ.inform();
+            }
         }
     }
 

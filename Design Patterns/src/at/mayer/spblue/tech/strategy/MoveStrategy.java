@@ -1,4 +1,4 @@
-package at.mayer.spblue.tech;
+package at.mayer.spblue.tech.strategy;
 
 public interface MoveStrategy {
     public float getX();

@@ -1,6 +1,6 @@
-package at.mayer.spblue.tech;
+package at.mayer.spblue.tech.strategy;
 
-public class MoveLeft implements MoveStrategy{
+public class MoveLeft implements MoveStrategy {
     private float x,y,speed;
 
     public float getX() {
@@ -34,5 +34,8 @@ public class MoveLeft implements MoveStrategy{
     }
     public void update(int delta){
         this.x += delta * speed;
+        if (this.x > 500 || this.x < 0){
+            this.x = 0;
+        }
     }
 }
