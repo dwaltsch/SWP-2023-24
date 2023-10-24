@@ -4,18 +4,18 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
 public class CircleActor implements Actor{
-    private MoveRight mr;
+    private MoveStrategy moveStrategy;
 
-    public CircleActor(MoveRight mr) {
+    public CircleActor(MoveStrategy mr) {
         super();
-        this.mr = mr;
+        this.moveStrategy = mr;
 
     }
 
     public void update(GameContainer gc, int delta){
-        mr.update(delta);
+        moveStrategy.update(delta);
     }
     public void render(Graphics graphics){
-        graphics.drawOval(this.mr.getX(),this.mr.getY(),20,20);
+        graphics.drawOval(this.moveStrategy.getX(),this.moveStrategy.getY(),20,20);
     }
 }

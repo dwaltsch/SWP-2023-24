@@ -22,11 +22,11 @@ public class MainGame extends BasicGame {
     @Override
     public void init(GameContainer gc) throws SlickException {
         this.actors = new ArrayList<>();
-        MoveRight mr1 = new MoveRight(10,10,0.4f);
-        MoveRight mr2 = new MoveRight(10,10,0.5f);
-        this.actors.add(new CircleActor(mr1));
-        this.actors.add(new CircleActor(mr2));
-        this.actors.add(new RectangleActor(50,50));
+        MoveStrategy moveStrategy1 = new MoveRight(100,100,0.3f);
+        MoveStrategy moveStrategy2 = new MoveLeft(300,50,0.5f);
+        this.actors.add(new CircleActor(moveStrategy1));
+        this.actors.add(new CircleActor(moveStrategy2));
+        this.actors.add(new RectangleActor(moveStrategy2));
     }
 
     @Override
