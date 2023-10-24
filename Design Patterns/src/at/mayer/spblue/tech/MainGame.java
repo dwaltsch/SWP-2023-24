@@ -27,6 +27,7 @@ public class MainGame extends BasicGame {
         this.actors.add(new CircleActor(moveStrategy1));
         this.actors.add(new CircleActor(moveStrategy2));
         this.actors.add(new RectangleActor(moveStrategy2));
+        this.actors.add(new Player());
     }
 
     @Override
