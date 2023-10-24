@@ -1,6 +1,6 @@
 package at.mayer.spblue.tech;
 
-public class MoveStrategy implements MoveStrategy{
+public class MoveRight implements MoveStrategy{
     private float x,y,speed;
 
     public float getX() {
@@ -33,6 +33,6 @@ public class MoveStrategy implements MoveStrategy{
         this.speed = speed;
     }
     public void update(int delta){
-        this.x += delta * speed;
+        this.x -= delta * speed;
     }
 }
