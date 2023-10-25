@@ -22,11 +22,11 @@ import org.newdawn.slick.command.MouseButtonControl;
  */
 public class InputProviderTest extends BasicGame implements InputProviderListener {
 	/** The command for attack */
-	private Command attack = new BasicCommand("attack");
+	private final Command attack = new BasicCommand("attack");
 	/** The command for jump */
-	private Command jump = new BasicCommand("jump");
+	private final Command jump = new BasicCommand("jump");
 	/** The command for jump */
-	private Command run = new BasicCommand("run");
+	private final Command run = new BasicCommand("run");
 	/** The input provider abstracting input */
 	private InputProvider provider;
 	/** The message to be displayed */

@@ -25,7 +25,7 @@ public class GUITest extends BasicGame implements ComponentListener {
 	/** The image being rendered */
 	private Image image;
 	/** The areas defined */
-	private MouseOverArea[] areas = new MouseOverArea[4];
+	private final MouseOverArea[] areas = new MouseOverArea[4];
 	/** The game container */
 	private GameContainer container;
 	/** The message to display */

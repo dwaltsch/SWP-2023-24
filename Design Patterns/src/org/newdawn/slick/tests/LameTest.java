@@ -16,7 +16,7 @@ import org.newdawn.slick.geom.Polygon;
  */
 public class LameTest extends BasicGame {
 	/** The poly being drawn */
-	private Polygon poly = new Polygon();
+	private final Polygon poly = new Polygon();
 	/** The image being textured */
 	private Image image;
 	

@@ -18,7 +18,7 @@ import org.newdawn.slick.svg.SimpleDiagramRenderer;
  */
 public class InkscapeTest extends BasicGame {
 	/** The renderer doing the work */
-	private SimpleDiagramRenderer[] renderer = new SimpleDiagramRenderer[5];
+	private final SimpleDiagramRenderer[] renderer = new SimpleDiagramRenderer[5];
 	/** The zoom */
 	private float zoom = 1;
 	/** The x location */
@@ -113,7 +113,7 @@ public class InkscapeTest extends BasicGame {
 	 * 
 	 * @param argv The arguments passed in
 	 */
-	public static void main(String argv[]) {
+	public static void main(String[] argv) {
 		try {
 			Renderer.setRenderer(Renderer.VERTEX_ARRAY_RENDERER);
 			Renderer.setLineStripRenderer(Renderer.QUAD_BASED_LINE_STRIP_RENDERER);

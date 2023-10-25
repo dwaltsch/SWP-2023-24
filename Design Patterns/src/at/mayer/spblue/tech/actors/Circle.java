@@ -5,9 +5,9 @@ import at.mayer.spblue.tech.strategy.MoveStrategy;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
-public class Observer extends AbstractActor implements Oberserver {
+public class Circle extends AbstractActor implements Oberserver {
     Color color;
-    public Observer(MoveStrategy moveStrategy) {
+    public Circle(MoveStrategy moveStrategy) {
         super(moveStrategy);
         this.color = Color.yellow;
     }

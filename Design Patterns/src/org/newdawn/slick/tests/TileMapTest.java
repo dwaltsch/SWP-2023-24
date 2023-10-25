@@ -33,7 +33,7 @@ public class TileMapTest extends BasicGame {
 	private int updateCounter = 0;
 	
 	/** changing some tile of the map every UPDATE_TIME milliseconds */
-	private static int UPDATE_TIME = 1000;
+	private static final int UPDATE_TIME = 1000;
 	
 	/** we want to store the originalTileID before we set a new one */
 	private int originalTileID = 0;

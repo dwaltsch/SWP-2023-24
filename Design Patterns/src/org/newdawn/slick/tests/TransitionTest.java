@@ -26,7 +26,7 @@ import org.newdawn.slick.util.Log;
  */
 public class TransitionTest extends StateBasedGame {
 	/** The transitions under test */
-	private Class[][] transitions = new Class[][] {
+	private final Class[][] transitions = new Class[][] {
 			{null, VerticalSplitTransition.class},
 			{FadeOutTransition.class, FadeInTransition.class},
 			{null, RotateTransition.class},
@@ -87,11 +87,11 @@ public class TransitionTest extends StateBasedGame {
 	 */
 	private class ImageState extends BasicGameState {
 		/** The id of this state */
-		private int id;
+		private final int id;
 		/** The next state we'll move to */
-		private int next;
+		private final int next;
 		/** The reference to the image to be displayed */
-		private String ref;
+		private final String ref;
 		/** The loaded image */
 		private Image image;
 		

@@ -191,7 +191,7 @@ public class NavMeshTest extends BasicGame implements PathFindingContext {
 	 */
 	private class DataMap implements TileBasedMap {
 		/** The map data */
-		private byte[] map = new byte[50*50];
+		private final byte[] map = new byte[50*50];
 	
 		/**
 		 * Create a new map loading it from a file

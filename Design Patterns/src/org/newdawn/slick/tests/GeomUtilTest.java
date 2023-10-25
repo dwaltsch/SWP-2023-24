@@ -32,16 +32,16 @@ public class GeomUtilTest extends BasicGame implements GeomUtilListener {
 	private Shape[] result;
 	
 	/** The points used */
-	private ArrayList points = new ArrayList();
+	private final ArrayList points = new ArrayList();
 	/** The points intersected */
-	private ArrayList marks = new ArrayList();
+	private final ArrayList marks = new ArrayList();
 	/** The points excluded */
-	private ArrayList exclude = new ArrayList();
+	private final ArrayList exclude = new ArrayList();
 	
 	/** True if we're moving the shape around */
 	private boolean dynamic;
 	/** The util under test */
-	private GeomUtil util = new GeomUtil();
+	private final GeomUtil util = new GeomUtil();
 	/** The x position of the shape */
 	private int xp;
 	/** The y position of the shape */

@@ -22,29 +22,29 @@ import org.newdawn.slick.opengl.renderer.Renderer;
  */
 public class GeomTest extends BasicGame {
 	/** The rectangle drawn */
-	private Shape rect = new Rectangle(100,100,100,100);
+	private final Shape rect = new Rectangle(100,100,100,100);
 	/** The rectangle drawn */
-	private Shape circle = new Circle(500,200,50);
+	private final Shape circle = new Circle(500,200,50);
 	/** The rectangle tested */
-	private Shape rect1 = new Rectangle(150,120,50,100).transform(Transform.createTranslateTransform(50, 50));
+	private final Shape rect1 = new Rectangle(150,120,50,100).transform(Transform.createTranslateTransform(50, 50));
 	/** The rectangle tested */
-	private Shape rect2 = new Rectangle(310,210,50,100).transform(
+	private final Shape rect2 = new Rectangle(310,210,50,100).transform(
             Transform.createRotateTransform((float)Math.toRadians(45), 335, 260));
 	/** The circle tested */
-	private Shape circle1 = new Circle(150,90,30);
+	private final Shape circle1 = new Circle(150,90,30);
 	/** The circle tested */
-	private Shape circle2 = new Circle(310,110,70);
+	private final Shape circle2 = new Circle(310,110,70);
 	/** The circle tested */
-	private Shape circle3 = new Ellipse(510, 150, 70, 70);
+	private final Shape circle3 = new Ellipse(510, 150, 70, 70);
 	/** The circle tested */
-	private Shape circle4 = new Ellipse(510, 350, 30, 30).transform(
+	private final Shape circle4 = new Ellipse(510, 350, 30, 30).transform(
             Transform.createTranslateTransform(-510, -350)).transform(
                     Transform.createScaleTransform(2, 2)).transform(
                             Transform.createTranslateTransform(510, 350));
 	/** The RoundedRectangle tested */
-    private Shape roundRect = new RoundedRectangle(50, 175, 100, 100, 20);
+    private final Shape roundRect = new RoundedRectangle(50, 175, 100, 100, 20);
 	/** The RoundedRectangle tested - less cornders */
-    private Shape roundRect2 = new RoundedRectangle(50, 280, 50, 50, 20, 20, RoundedRectangle.TOP_LEFT | RoundedRectangle.BOTTOM_RIGHT);
+    private final Shape roundRect2 = new RoundedRectangle(50, 280, 50, 50, 20, 20, RoundedRectangle.TOP_LEFT | RoundedRectangle.BOTTOM_RIGHT);
 
     /**
 	 * Create a new test of graphics context rendering

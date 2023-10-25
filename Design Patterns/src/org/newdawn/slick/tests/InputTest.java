@@ -20,7 +20,7 @@ public class InputTest extends BasicGame {
 	/** The message to be displayed */
 	private String message = "Press any key, mouse button, or drag the mouse";
 	/** The lines to be drawn on the screen */
-	private ArrayList lines = new ArrayList();
+	private final ArrayList lines = new ArrayList();
 	/** True if the mouse button is down */
 	private boolean buttonDown;
 	/** The x position of our controlled stuff */
@@ -28,7 +28,7 @@ public class InputTest extends BasicGame {
 	/** The y position of our controlled stuff */
 	private float y;
 	/** The colors */
-	private Color[] cols = new Color[] {Color.red, Color.green, Color.blue, Color.white, Color.magenta, Color.cyan};
+	private final Color[] cols = new Color[] {Color.red, Color.green, Color.blue, Color.white, Color.magenta, Color.cyan};
 	/** The current color index */
 	private int index;
 	/** The input syste being polled */
@@ -194,13 +194,13 @@ public class InputTest extends BasicGame {
 	 */
 	private class Line {
 		/** The start x position */
-		private int oldx;
+		private final int oldx;
 		/** The start y position */
-		private int oldy;
+		private final int oldy;
 		/** The end x position */
-		private int newx;
+		private final int newx;
 		/** The end y position */
-		private int newy;
+		private final int newy;
 		
 		/**
 		 * Create a new line

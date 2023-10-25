@@ -43,7 +43,7 @@ public class SoundTest extends BasicGame {
 	private int volume = 10;
 	
 	/** The IDs of the sources used for each engine noise */
-	private int[] engines = new int[3];
+	private final int[] engines = new int[3];
 	
 	/**
 	 * Create a new test for sounds

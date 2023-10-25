@@ -1,5 +1,6 @@
 package at.mayer.spblue.tech.actors;
 
+import at.mayer.spblue.tech.observer.Oberserver;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -8,17 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player implements Actor {
-    private float x,y,speed;
-    private List<Observer> observers;
+    private float x;
+    private final float y;
+    private final float speed;
+    private final List<Oberserver> circles;
 
     public Player() {
-        this.observers = new ArrayList<>();
+        this.circles = new ArrayList<>();
         this.x = 300;
         this.y = 300;
         this.speed = 1f;
     }
-    public void addObserver(Observer lcircle){
-        this.observers.add(lcircle);
+    public void addObserver(Oberserver obs){
+        this.circles.add(obs);
     }
     public void move(GameContainer gc,int delta){
         if(gc.getInput().isKeyDown(Input.KEY_LEFT)){
@@ -29,7 +32,7 @@ public class Player implements Actor {
             this.x += delta * speed;
         }
         if(this.x > 700){
-            for(Observer circ: observers){
+            for(Oberserver circ: circles){
                 circ.inform();
             }
         }

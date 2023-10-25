@@ -19,13 +19,13 @@ public class CurveTest extends BasicGame {
 	/** The curve being rendered */
 	private Curve curve;
 	/** The start point of the curve */
-	private Vector2f p1 = new Vector2f(100,300);
+	private final Vector2f p1 = new Vector2f(100,300);
 	/** The first control point */
-	private Vector2f c1 = new Vector2f(100,100);
+	private final Vector2f c1 = new Vector2f(100,100);
 	/** The second control point */
-	private Vector2f c2 = new Vector2f(300,100);
+	private final Vector2f c2 = new Vector2f(300,100);
 	/** The end point of the curve */
-	private Vector2f p2 = new Vector2f(300,300);
+	private final Vector2f p2 = new Vector2f(300,300);
 	
 	/** The polygon drawn next done */
 	private Polygon poly;
@@ -91,7 +91,7 @@ public class CurveTest extends BasicGame {
 	 * 
 	 * @param argv The arguments passed in
 	 */
-	public static void main(String argv[]) {
+	public static void main(String[] argv) {
 		try {
 			AppGameContainer container = new AppGameContainer(new CurveTest());
 			container.setDisplayMode(800,600,false);

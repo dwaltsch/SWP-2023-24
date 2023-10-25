@@ -17,7 +17,7 @@ public class ImageReadTest extends BasicGame {
 	/** The image loaded to be read */
 	private Image image;
 	/** The four pixels read */
-	private Color[] read = new Color[6];
+	private final Color[] read = new Color[6];
 	/** The main graphics context */
 	private Graphics g;
 	

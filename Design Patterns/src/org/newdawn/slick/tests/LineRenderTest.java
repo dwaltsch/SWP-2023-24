@@ -18,11 +18,11 @@ import org.newdawn.slick.opengl.renderer.Renderer;
  */
 public class LineRenderTest extends BasicGame {
 	/** The polygon to be rendered */
-	private Polygon polygon = new Polygon();
+	private final Polygon polygon = new Polygon();
 	/** The path to be rendered */
-	private Path path = new Path(100,100);
+	private final Path path = new Path(100,100);
 	/** The line width to render to */
-	private float width = 10;
+	private final float width = 10;
 	/** True if antialiasing */
 	private boolean antialias = true;
 	

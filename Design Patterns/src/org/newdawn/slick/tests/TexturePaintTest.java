@@ -20,12 +20,12 @@ import org.newdawn.slick.geom.Vector2f;
  */
 public class TexturePaintTest extends BasicGame {
 	/** The poly being drawn */
-	private Polygon poly = new Polygon();
+	private final Polygon poly = new Polygon();
 	/** The image being textured */
 	private Image image;
 	
 	/** The texture paint rectangle */
-	private Rectangle texRect = new Rectangle(50,50,100,100);
+	private final Rectangle texRect = new Rectangle(50,50,100,100);
 	/** The texture paint */
 	private TexCoordGenerator texPaint;
 	

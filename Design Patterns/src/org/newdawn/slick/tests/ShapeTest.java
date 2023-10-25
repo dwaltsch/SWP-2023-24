@@ -36,9 +36,9 @@ public class ShapeTest extends BasicGame {
     /** list for drawing the shapes*/
     private ArrayList shapes;
     /** track key presses */
-    private boolean keys[];
+    private boolean[] keys;
     /** since no modifiers, use this for shifted characters */
-    private char lastChar[];
+    private char[] lastChar;
     /** The polgon randomly generated */
     private Polygon randomShape = new Polygon();
     
@@ -55,10 +55,10 @@ public class ShapeTest extends BasicGame {
 
 		randomShape = new Polygon();
 		// generate random polygon
-		randomShape.addPoint(0 + (int)(Math.random() * change), 0 + (int)(Math.random() * change));
-		randomShape.addPoint(size - (int)(Math.random() * change), 0 + (int)(Math.random() * change));
+		randomShape.addPoint((int) (Math.random() * change), (int) (Math.random() * change));
+		randomShape.addPoint(size - (int)(Math.random() * change), (int) (Math.random() * change));
 		randomShape.addPoint(size - (int)(Math.random() * change), size - (int)(Math.random() * change));
-		randomShape.addPoint(0 + (int)(Math.random() * change), size - (int)(Math.random() * change));
+		randomShape.addPoint((int) (Math.random() * change), size - (int)(Math.random() * change));
 	
 		// center polygon
 		randomShape.setCenterX(x);

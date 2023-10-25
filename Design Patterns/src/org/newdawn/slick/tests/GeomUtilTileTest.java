@@ -30,17 +30,17 @@ public class GeomUtilTileTest extends BasicGame implements GeomUtilListener {
 	private Shape[] result;
 
 	/** The util under test */
-	private GeomUtil util = new GeomUtil();
+	private final GeomUtil util = new GeomUtil();
 
 	/** The original list of shapes */
-	private ArrayList original = new ArrayList();
+	private final ArrayList original = new ArrayList();
 	/** The original list of shapes */
 	private ArrayList combined = new ArrayList();
 
 	/** The list of intersection points */
-	private ArrayList intersections = new ArrayList();
+	private final ArrayList intersections = new ArrayList();
 	/** The list of used points */
-	private ArrayList used = new ArrayList();
+	private final ArrayList used = new ArrayList();
 
 	/** The quad space of shapes that need to be checked against each other */
 	private ArrayList[][] quadSpace;

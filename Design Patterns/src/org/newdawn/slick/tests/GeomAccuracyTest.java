@@ -66,7 +66,7 @@ public class GeomAccuracyTest extends BasicGame {
 	 */
 	public void render(GameContainer container, Graphics g) {
 		
-		String text = new String();
+		String text = "";
 		
 		switch(curTest) {
 		
@@ -121,7 +121,7 @@ public class GeomAccuracyTest extends BasicGame {
 	 */
 	void arcTest(Graphics g) {
 		
-		if(hideOverlay == false) {
+		if(!hideOverlay) {
 			g.setColor(overlayColor);
 			g.drawLine(198, 100, 198, 198);
 			g.drawLine(100, 198, 198, 198);
@@ -149,7 +149,7 @@ public class GeomAccuracyTest extends BasicGame {
 		elip = new Ellipse(449, 299, 49, 49);
 		g.fill(elip);
 		
-		if(hideOverlay == false) {
+		if(!hideOverlay) {
 			g.setColor(overlayColor);
 			g.drawLine(100, 149, 198, 149);
 			g.drawLine(149, 100, 149, 198);
@@ -194,7 +194,7 @@ public class GeomAccuracyTest extends BasicGame {
 		g.fill(rrect);
 		
 		// Draw our overlays
-		if(hideOverlay == false) {
+		if(!hideOverlay) {
 	 		g.setColor(overlayColor);
 	 		
 	 		// Upper row
