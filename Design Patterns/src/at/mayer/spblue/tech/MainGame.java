@@ -4,6 +4,7 @@ import at.mayer.spblue.tech.actors.Actor;
 import at.mayer.spblue.tech.actors.Circle;
 import at.mayer.spblue.tech.actors.Player;
 import at.mayer.spblue.tech.actors.RectangleActor;
+import at.mayer.spblue.tech.factory.RandomCircleFactory;
 import at.mayer.spblue.tech.strategy.MoveLeft;
 import at.mayer.spblue.tech.strategy.MoveRight;
 import at.mayer.spblue.tech.strategy.MoveStrategy;
@@ -34,6 +35,10 @@ public class MainGame extends BasicGame {
         this.player = new Player();
         MoveStrategy moveStrategy1 = new MoveRight(100,100,0.01f);
         MoveStrategy moveStrategy2 = new MoveLeft(300,50,0.01f);
+        MoveStrategy moveStrategy3 = new MoveLeft(50,300,0.01f);
+        for (int i = 0; i < 10; i++) {
+            this.actors.add(RandomCircleFactory.getRandomActor(moveStrategy3));
+        }
         Circle c1 = new Circle(moveStrategy1);
         this.actors.add(c1);
         Circle c2 = new Circle(moveStrategy2);
