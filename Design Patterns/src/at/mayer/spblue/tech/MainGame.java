@@ -5,6 +5,7 @@ import at.mayer.spblue.tech.actors.Circle;
 import at.mayer.spblue.tech.actors.Player;
 import at.mayer.spblue.tech.actors.RectangleActor;
 import at.mayer.spblue.tech.factory.RandomCircleFactory;
+import at.mayer.spblue.tech.singleton.CounterSingleton;
 import at.mayer.spblue.tech.strategy.MoveLeft;
 import at.mayer.spblue.tech.strategy.MoveRight;
 import at.mayer.spblue.tech.strategy.MoveStrategy;
@@ -39,6 +40,10 @@ public class MainGame extends BasicGame {
         for (int i = 0; i < 10; i++) {
             this.actors.add(RandomCircleFactory.getRandomActor(moveStrategy3));
         }
+
+        CounterSingleton cs = CounterSingleton.getInstance();
+        CounterSingleton cs2 = CounterSingleton.getInstance();
+
         Circle c1 = new Circle(moveStrategy1);
         this.actors.add(c1);
         Circle c2 = new Circle(moveStrategy2);
@@ -49,6 +54,10 @@ public class MainGame extends BasicGame {
         this.player.addObserver(rec1);
         this.player.addObserver(c1);
         this.player.addObserver(c2);
+        cs.increaseCounter();
+        cs2.increaseCounter();
+        System.out.println(cs.getCounter());
+        System.out.println(cs2.getCounter());
     }
 
     @Override
