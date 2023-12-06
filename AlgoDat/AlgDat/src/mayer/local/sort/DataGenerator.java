@@ -7,7 +7,7 @@ public class DataGenerator {
         int[] data = new int[size];
         Random random = new Random();
         for (int i = 0; i < size; i++) {
-            data[i] = random.nextInt(20);
+            data[i] = random.nextInt(50);
         }
         return data;
     }

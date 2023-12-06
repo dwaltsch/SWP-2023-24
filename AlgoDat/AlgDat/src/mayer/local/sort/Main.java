@@ -5,6 +5,6 @@ public class Main {
         Sorter sorter = new Sorter();
         Algo bubble = new BubbleSort();
         sorter.setAlgo(bubble);
-        DataGenerator.printArray(sorter.sort(DataGenerator.generateDataArray(5)));
+        DataGenerator.printArray(sorter.sort(DataGenerator.generateDataArray(10)));
     }
 }
