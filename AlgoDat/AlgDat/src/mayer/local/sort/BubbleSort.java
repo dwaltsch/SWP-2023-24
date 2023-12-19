@@ -7,9 +7,9 @@ public class BubbleSort implements Algo{
         for (int y = 0; y < input.length - 1; y++) {
             for (int i = 0; i < input.length - 1; i++) {
                 if (input[i] > input[i + 1]) {
-                    int zwischenspeicher = input[i];
+                    int store = input[i];
                     input[i] = input[i + 1];
-                    input[i + 1] = zwischenspeicher;
+                    input[i + 1] = store;
                     swap = true;
                 }
             }
